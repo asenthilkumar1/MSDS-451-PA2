@@ -1,0 +1,174 @@
+
+Price history used for my assets: 2015-01-02 to 2025-12-31 with 2765 daily returns
+
+
+=== Monte Carlo study: starter assets ===
+              A         B         C         D
+count  700.0000  700.0000  700.0000  700.0000
+mean     0.0204    0.0721    0.1560    0.2043
+std      0.0498    0.1243    0.1743    0.2486
+min     -0.1164   -0.2807   -0.2845   -0.5311
+25%     -0.0118   -0.0110    0.0336    0.0331
+50%      0.0204    0.0744    0.1469    0.2191
+75%      0.0547    0.1516    0.2787    0.3758
+max      0.1920    0.5487    0.6692    1.0403
+
+Target Correlation of Returns for Generated Data:
+[[1.  0.3 0.3 0.3]
+ [0.3 1.  0.6 0.6]
+ [0.3 0.6 1.  0.6]
+ [0.3 0.6 0.6 1. ]]
+
+Actual Correlation of Returns in Generated Data:
+        A       B       C       D
+A  1.0000  0.2923  0.3418  0.3125
+B  0.2923  1.0000  0.6294  0.6406
+C  0.3418  0.6294  1.0000  0.6133
+D  0.3125  0.6406  0.6133  1.0000
+
+Target Covariance of Returns for Generated Data:
+[[0.0025 0.0018 0.0026 0.0038]
+ [0.0018 0.0144 0.0122 0.018 ]
+ [0.0026 0.0122 0.0289 0.0255]
+ [0.0038 0.018  0.0255 0.0625]]
+
+Actual Covariance of Returns in Generated Data:
+[[0.0025 0.0018 0.003  0.0039]
+ [0.0018 0.0154 0.0136 0.0198]
+ [0.003  0.0136 0.0304 0.0266]
+ [0.0039 0.0198 0.0266 0.0618]]
+
+Summary of portfolio results with short positions allowed:
+             w1        w2        w3        w4  Positions  returnMean  returnSD
+count  700.0000  700.0000  700.0000  700.0000   700.0000    700.0000  700.0000
+mean    -0.0615   -0.0252    0.0266    1.0600     1.0229      0.2177    0.2992
+std      0.5639    0.5612    0.5772    0.9830     0.1496      0.1303    0.1513
+min     -0.9998   -0.9954   -0.9978   -1.9280     1.0000     -0.1510    0.0510
+25%     -0.5609   -0.4986   -0.4541    0.3794     1.0000      0.1293    0.1754
+50%     -0.0854   -0.0355    0.0438    1.0579     1.0000      0.2161    0.2749
+75%      0.3686    0.4504    0.5350    1.7394     1.0000      0.3083    0.3911
+max      0.9925    0.9998    0.9982    3.7062     2.0000      0.5314    0.7621
+
+Summary of portfolio results with long positions only:
+             w1        w2        w3        w4  Positions  returnMean  returnSD
+count  700.0000  700.0000  700.0000  700.0000      700.0    700.0000  700.0000
+mean     0.2494    0.2497    0.2469    0.2539        2.0      0.1135    0.1276
+std      0.1390    0.1410    0.1404    0.1398        0.0      0.0226    0.0230
+min      0.0001    0.0006    0.0008    0.0020        2.0      0.0311    0.0522
+25%      0.1445    0.1369    0.1361    0.1499        2.0      0.0988    0.1120
+50%      0.2509    0.2465    0.2493    0.2541        2.0      0.1137    0.1270
+75%      0.3396    0.3428    0.3448    0.3447        2.0      0.1281    0.1427
+max      0.9299    0.9018    0.7270    0.7304        2.0      0.1745    0.1980
+
+Lowest risk and highest return portfolios, starter assets:
+
+Long Positions Only
+Lowest risk:
+  w1    w2    w3    w4  returnMean  returnSD
+0.93 0.004 0.037 0.029       0.031     0.052
+Highest return:
+   w1    w2    w3    w4  returnMean  returnSD
+0.041 0.004 0.451 0.504       0.174     0.185
+Portfolios with negative mean return: 0 of 700
+
+Shorts OK
+Lowest risk:
+   w1    w2     w3    w4  returnMean  returnSD
+0.902 0.227 -0.135 0.005       0.015     0.051
+Highest return:
+    w1     w2     w3    w4  returnMean  returnSD
+-0.883 -0.912 -0.911 3.706       0.531     0.762
+Portfolios with negative mean return: 34 of 700
+
+
+=== Monte Carlo study: mine assets ===
+          Bonds      Gold     SP500   Bitcoin
+count  700.0000  700.0000  700.0000  700.0000
+mean     0.0205    0.1270    0.1478    0.7414
+std      0.0534    0.1526    0.1770    0.6407
+min     -0.1262   -0.3065   -0.4040   -1.1008
+25%     -0.0140    0.0233    0.0329    0.3294
+50%      0.0205    0.1298    0.1347    0.7779
+75%      0.0573    0.2215    0.2685    1.1703
+max      0.2046    0.7103    0.7434    2.6871
+
+Target Correlation of Returns for Generated Data:
+[[1.     0.3319 0.1064 0.092 ]
+ [0.3319 1.     0.0442 0.087 ]
+ [0.1064 0.0442 1.     0.2251]
+ [0.092  0.087  0.2251 1.    ]]
+
+Actual Correlation of Returns in Generated Data:
+          Bonds    Gold   SP500  Bitcoin
+Bonds    1.0000  0.3231  0.1692   0.0991
+Gold     0.3231  1.0000  0.0792   0.1119
+SP500    0.1692  0.0792  1.0000   0.1933
+Bitcoin  0.0991  0.1119  0.1933   1.0000
+
+Target Covariance of Returns for Generated Data:
+[[0.0029 0.0026 0.001  0.0033]
+ [0.0026 0.0217 0.0012 0.0086]
+ [0.001  0.0012 0.0317 0.0268]
+ [0.0033 0.0086 0.0268 0.4466]]
+
+Actual Covariance of Returns in Generated Data:
+[[0.0028 0.0026 0.0016 0.0034]
+ [0.0026 0.0233 0.0021 0.0109]
+ [0.0016 0.0021 0.0313 0.0219]
+ [0.0034 0.0109 0.0219 0.4104]]
+
+Summary of portfolio results with short positions allowed:
+             w1        w2        w3        w4  Positions  returnMean  returnSD
+count  700.0000  700.0000  700.0000  700.0000   700.0000    700.0000  700.0000
+mean    -0.0615   -0.0252    0.0266    1.0600     1.0229      0.7854    0.7790
+std      0.5639    0.5612    0.5772    0.9830     0.1496      0.6356    0.4962
+min     -0.9998   -0.9954   -0.9978   -1.9280     1.0000     -1.1415    0.0571
+25%     -0.5609   -0.4986   -0.4541    0.3794     1.0000      0.3508    0.3660
+50%     -0.0854   -0.0355    0.0438    1.0579     1.0000      0.7917    0.7106
+75%      0.3686    0.4504    0.5350    1.7394     1.0000      1.2173    1.1068
+max      0.9925    0.9998    0.9982    3.7062     2.0000      2.4791    2.3349
+
+Summary of portfolio results with long positions only:
+             w1        w2        w3        w4  Positions  returnMean  returnSD
+count  700.0000  700.0000  700.0000  700.0000      700.0    700.0000  700.0000
+mean     0.2494    0.2497    0.2469    0.2539        2.0      0.2616    0.1964
+std      0.1390    0.1410    0.1404    0.1398        0.0      0.0905    0.0733
+min      0.0001    0.0006    0.0008    0.0020        2.0      0.0467    0.0568
+25%      0.1445    0.1369    0.1361    0.1499        2.0      0.1979    0.1387
+50%      0.2509    0.2465    0.2493    0.2541        2.0      0.2624    0.1896
+75%      0.3396    0.3428    0.3448    0.3447        2.0      0.3215    0.2423
+max      0.9299    0.9018    0.7270    0.7304        2.0      0.5648    0.4727
+
+Lowest risk and highest return portfolios, mine assets:
+
+Long Positions Only
+Lowest risk:
+  w1    w2    w3    w4  returnMean  returnSD
+0.93 0.004 0.037 0.029       0.047     0.057
+Highest return:
+   w1    w2    w3   w4  returnMean  returnSD
+0.114 0.096 0.059 0.73       0.565     0.473
+Portfolios with negative mean return: 0 of 700
+
+Shorts OK
+Lowest risk:
+   w1    w2    w3     w4  returnMean  returnSD
+0.812 0.137 0.074 -0.023       0.028     0.057
+Highest return:
+    w1     w2     w3    w4  returnMean  returnSD
+-0.883 -0.912 -0.911 3.706       2.479     2.335
+Portfolios with negative mean return: 77 of 700
+
+Inputs estimated from price history for my assets (annualized):
+  Asset   Mean     SD
+  Bonds 0.0201 0.0536
+   Gold 0.1244 0.1475
+  SP500 0.1422 0.1779
+Bitcoin 0.7378 0.6682
+         Bonds   Gold  SP500  Bitcoin
+Bonds    1.000  0.332  0.106    0.092
+Gold     0.332  1.000  0.044    0.087
+SP500    0.106  0.044  1.000    0.225
+Bitcoin  0.092  0.087  0.225    1.000
+
+Run Complete
