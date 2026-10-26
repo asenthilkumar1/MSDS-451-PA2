@@ -18,6 +18,7 @@ The program is the professor's starter script (written in R), translated to Pyth
 | `pa2.py` | Main program. Runs the Monte Carlo study for both sets of assets. |
 | `getdata_yfinance.py` | Downloads the price history for the four real assets. `pa2.py` calls it automatically if the data files are missing. |
 | `msds_getdata_yfinance_bnd.csv`, `..._gld.csv`, `..._spy.csv`, `..._btc-usd.csv` | Daily price history downloaded from Yahoo Finance (January 2015 to December 2025). |
+| `pa2-final-report.pdf`, `pa2-final-report.docx` | The research report (PDF and Word versions of the same document). |
 | `pa2-output.txt` | Console output from a full run of `pa2.py`. |
 | `pa2-estimated-inputs.csv` | Annual mean return and standard deviation estimated for my four assets. |
 | `pa2-figure-starter.pdf`, `pa2-figure-starter.png` | Opportunity set plot for the starter assets. |
@@ -43,6 +44,8 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
+
+On Windows, activate the environment with `.venv\Scripts\activate` instead of the `source` line.
 
 ## Running the program
 
@@ -115,5 +118,9 @@ The sample is January 2, 2015 to December 31, 2025, with 2,765 daily returns. Bi
 - The plot is styled to look like the starter's ggplot figure (grey panels, white grid lines, two panels by strategy). It is saved at 11 by 6.2 inches (the starter's is 11 by 8.5) so it fits a report page better.
 - The return scenarios are drawn with numpy's Cholesky method (`method="cholesky"`). The R starter's `mvrnorm` uses an eigen decomposition. Cholesky gives the same draws on every machine, while numpy's default can vary between machines.
 
-## Use of AI assistants
+## Report
 
+The research report is `pa2-final-report.pdf` (the same document is in `pa2-final-report.docx`). It describes the problem, the data preparation, the research design, the results for both runs with the two figures, and the limitations. Its numbers come from the outputs in this repository, so they can be checked against `pa2-output.txt`, the CSV files, and the figures.
+
+## Use of AI assistants
+I used AI in helping me translate the provided R starter code into a Python script. I also used it to recompute the results independently from the CSV files to confirm the numbers, test the program on scratch copies, and reviewed the repo against the assignment's instructions. Lastly, I used it to reformat my report to look more legible and cleaned up.
